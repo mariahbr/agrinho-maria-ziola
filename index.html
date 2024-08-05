@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Crescimento de Vacas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora de Crescimento de Vacas</h1>
+    </header>
+    <main>
+        <section aria-labelledby="calculator">
+            <h2 id="calculator">Calcule o número de vacas ao longo dos anos</h2>
+            <form id="cow-form">
+                <label for="initialCows">Número inicial de vacas:</label>
+                <input type="number" id="initialCows" name="initialCows" min="0" required aria-describedby="initialCowsDesc">
+                <p id="initialCowsDesc">Insira o número inicial de vacas.</p>
+                
+                <label for="annualGrowth">Taxa de crescimento anual (vacas adicionais por ano):</label>
+                <input type="number" id="annualGrowth" name="annualGrowth" min="0" required aria-describedby="annualGrowthDesc">
+                <p id="annualGrowthDesc">Insira quantas vacas são adicionadas a cada ano.</p>
+
+                <label for="years">Número de anos:</label>
+                <input type="number" id="years" name="years" min="1" max="50" value="5" aria-describedby="yearsDesc">
+                <p id="yearsDesc">Insira o número de anos para calcular o total de vacas.</p>
+
+                <button type="button" id="calculateButton">Calcular</button>
+            </form>
+            <div id="result" aria-live="polite"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Calculadora de Crescimento de Vacas</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
